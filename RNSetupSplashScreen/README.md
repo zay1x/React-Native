@@ -47,6 +47,7 @@ _ℹ️ For `react-native` < `0.71` setup, follow the [`v4.4.0 README.md`](https
 ---
 
 We move the following file to Xcode
+
 ![BoostSplash file](https://github.com/zay1x/React-Native/assets/32409681/935787a3-ac41-42e0-90ac-97e83948617d 'BootSplash file')
 
 ![Move file](https://github.com/zay1x/React-Native/assets/32409681/6312ae34-0275-40b2-a9b0-1dcc6add51cb 'Move file')
