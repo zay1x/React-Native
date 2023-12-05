@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --wheel-width: 300px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: calc(var(--wheel-width) / 30);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: pink; /* Temp */
+}
+
+.container {
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 5rem /* Temp */;
+}
+
+.container .spin {
+  width: 6rem;
+  height: 6rem;
+  background-color: #b0271d;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.4rem solid white;
+  user-select: none;
+}
+
+.container .spin::after {
+  position: absolute;
+  top: -2rem;
+  content: "";
+  border-width: 0 1rem 2rem;
+  border-style: solid;
+  border-color: transparent;
+  border-bottom-color: white;
+}
+
+.container .spin .btn-spin {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+}
+
+.container .spin #turns {
+  font-size: 1rem;
+  color: lightgray;
+  background-color: #ec3637;
+  padding: 0 1rem;
+  border-radius: 1rem;
+  border: 0.1rem solid lightgray;
+}
+
+.container .wheel {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: cubic-bezier(0.19, 1, 0.22, 1) 5s; /* Timeout to postMessage event triggered */
+}
